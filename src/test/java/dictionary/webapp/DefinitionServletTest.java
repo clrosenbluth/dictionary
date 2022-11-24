@@ -35,9 +35,12 @@ class DefinitionServletTest {
         // then
         verify(request, atLeast(1)).getParameter("word");
         verify(response, atLeast(1)).getWriter();
-        assertEquals("\"to express in words (speech sounds that communicate meaning) [v -ED, -ING, -S]\"\n",
+        assertEquals(
+                "\"to express in words (speech sounds that " +
+                        "communicate meaning) [v -ED, -ING, -S]\"\n",
                 stringWriter.toString());
     }
+
     @Test
     public void doGet_notRealWord() throws Exception {
         // given
