@@ -36,8 +36,8 @@ class DefinitionServletTest {
         verify(request, atLeast(1)).getParameter("word");
         verify(response, atLeast(1)).getWriter();
         assertEquals(
-                "\"to express in words (speech sounds that " +
-                        "communicate meaning) [v -ED, -ING, -S]\"\n",
+                "\"to express in words (speech sounds that " 
+                        + "communicate meaning) [v -ED, -ING, -S]\"\n",
                 stringWriter.toString());
     }
 
