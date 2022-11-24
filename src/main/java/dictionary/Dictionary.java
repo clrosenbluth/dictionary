@@ -29,12 +29,12 @@ public class Dictionary {
         }
     }
 
-    public boolean isWord (final String lookupWord)
+    public boolean isWord(final String lookupWord)
     {
         return getDefinition(lookupWord) != null;
     }
 
-    public String getDefinition (final String lookupWord) {
+    public String getDefinition(final String lookupWord) {
         String lookupWordUpperCase = lookupWord.toUpperCase();
         return words.get(lookupWordUpperCase);
     }

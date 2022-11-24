@@ -24,9 +24,9 @@ public class DefinitionServlet extends HttpServlet {
 
         String word = request.getParameter("word");
 
-        String definition = dictionary.isWord(word) ?
-                dictionary.getDefinition(word) :
-                "Not a word";
+        String definition = dictionary.isWord(word)
+                ? dictionary.getDefinition(word)
+                : "Not a word";
 
         response.setContentType("text/json");
         response.getWriter().println(gson.toJson((definition)));
