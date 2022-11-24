@@ -1,0 +1,22 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <display-name>DefinitionServlet</display-name>
+        <servlet-name>DefinitionServlet</servlet-name>
+        <servlet-class>dictionary.webapp.DefinitionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DefinitionServlet</servlet-name>
+        <url-pattern>/definition</url-pattern>
+    </servlet-mapping>
+
+</web-app>
