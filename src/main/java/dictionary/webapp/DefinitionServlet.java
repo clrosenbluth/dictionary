@@ -10,20 +10,17 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DefinitionServlet extends HttpServlet
-{
+public class DefinitionServlet extends HttpServlet {
     private final Dictionary dictionary;
     private final Gson gson = new Gson();
 
-    public DefinitionServlet()
-    {
+    public DefinitionServlet() {
         dictionary = new Dictionary();
     }
 
     @Override
     public void doGet(HttpServletRequest request,
-                      HttpServletResponse response) throws IOException
-    {
+                      HttpServletResponse response) throws IOException {
 
         String word = request.getParameter("word");
 
