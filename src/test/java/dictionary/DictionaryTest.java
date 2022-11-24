@@ -3,13 +3,11 @@ package dictionary;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-class DictionaryTest
-{
+class DictionaryTest {
     private final Dictionary dictionary = new Dictionary();
 
     @Test
-        void isWord_True()
-        {
+        void isWord_True() {
             // given
 
             // when
@@ -19,8 +17,7 @@ class DictionaryTest
         }
 
         @Test
-        void isWord_False()
-        {
+        void isWord_False() {
             // given
 
             // when
@@ -52,8 +49,7 @@ class DictionaryTest
         }
 
         @Test
-        void getDef_HasDef()
-        {
+        void getDef_HasDef() {
             // given
 
             // when
@@ -64,8 +60,7 @@ class DictionaryTest
         }
 
         @Test
-        void getDef_NoDef()
-        {
+        void getDef_NoDef() {
             // given
 
             // when
@@ -76,8 +71,7 @@ class DictionaryTest
         }
 
         @Test
-        void getDef_BadWord()
-        {
+        void getDef_BadWord() {
             // given
             Dictionary dictionary = new Dictionary();
 
@@ -89,8 +83,7 @@ class DictionaryTest
         }
 
         @Test
-        void getDef_FragWord()
-        {
+        void getDef_FragWord() {
             // given
 
             // when
