@@ -9,7 +9,7 @@ public class Dictionary {
     private final HashMap<String, String> words = new HashMap<>();
 
     public Dictionary() {
-        File file = new File("/Users/chanarosenbluth/IdeaProjects/Dictionary/dictionary.txt");
+        File file = new File("dictionary.txt");
         try {
 
             Scanner scanner = new Scanner(file);
