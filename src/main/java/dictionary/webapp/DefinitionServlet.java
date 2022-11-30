@@ -16,6 +16,8 @@ public class DefinitionServlet extends HttpServlet {
         dictionary = new Dictionary();
     }
 
+    // http://localhost:8080/Dictionary-1.0-SNAPSHOT/definition?word=dog
+
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws IOException {
