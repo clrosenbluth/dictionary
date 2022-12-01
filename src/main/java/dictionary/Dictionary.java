@@ -2,6 +2,7 @@ package dictionary;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -9,10 +10,10 @@ public class Dictionary {
     private final HashMap<String, String> words = new HashMap<>();
 
     public Dictionary() {
-        File file = new File("dictionary.txt");
+        InputStream input = Dictionary.class.getResourceAsStream("/dictionary.txt");
         try {
 
-            Scanner scanner = new Scanner(file);
+            Scanner scanner = new Scanner(input);
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -24,7 +25,7 @@ public class Dictionary {
                     words.put(entry[0], entry[1]);
                 }
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
