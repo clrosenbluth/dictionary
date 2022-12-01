@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        function lookupWord() {
+            $.ajax({
+                type: "GET",
+                url: "definition",
+                data: {
+                    word: $("#word").val()
+                },
+                success: function(result) {
+                    $("#definition").val(result)
+                },
+                error: function(result) {
+                    console.log(result);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<input id="word" type="text" oninput="lookupWord()"/>
+<br/><br/>
+<input id="definition" type="text"/>
+
+</body>
+</html>
